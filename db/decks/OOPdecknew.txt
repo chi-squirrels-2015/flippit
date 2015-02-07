@@ -1,0 +1,49 @@
+Encapsulation,The grouping of related ideas into one unit which can be referred to by a single name
+Encapsulation saves:,Saves computer memory by using a repeating pattern of instructions and saves human memory through conceptual chunking.
+OO Encapsulation,Groups operations and attributes into an object so that state is only changeable through the interface
+Information/implemenation Hiding,Encapsulation's use for restricting visibility of implementation details
+Benefits of Info/Implementation Hiding,Localizes design decisions (avoiding ripple effect) and decouples content from internal operation/representation
+Attribute,Externally visible property may correspond to an instance var but isn't required to
+Instance variable,implementation specific detail
+State Retention,objects have a memory of their state the set of values the object currently holds
+Object Identity,Each object can be used separately through the reference of a handle or pointer (handles are unique)
+Messages 3 parts,1) Target's handle 2)Operation for target to do 3) Parameters arguments supplementary info
+Operation:,What you want performed; an abstraction
+Method:,A specific implementation of an operation
+4 Roles of objects in a message,1-Sender 2-Target 3-Pointed to by a var in target 4-pointed to by a var in argument
+3 Types of Messages, 1-Interrogative 2-Informative 3-Imperative
+Interrogative Message,Request that an object tell something about its current state; present oriented
+Informative Message,Send info about something that has happened so a target CAN update itself; past oriented
+Imperative Message,Ask for the target to do something to itself or something in the environment
+Classes,A 'stencil' for how to make a type of object. Each object has the same structure and behavior as the class.
+Inheritance,IS A relationship between class Y and class X; if Y is a X then Y has the attributes and operations of X
+Advantage of inheritance,You can first build a class for the general case and then add more specialized classes for special cases
+Code Inheritance,the machinery used
+Type Inheritance,What you must be able to do
+Procedural Polymorphism: Overloading,static   operation name is the same but the list of parameters changes
+Procedural Polymorphism: Overridding,dynamic   pass the call down the inheritance hierarchy until you hit the most specific one
+Type Polymorphism 3 Abilities,1) to use any implementation of a single type 2) an object can be of two or more unrelated types 3) to use a specialized object when a more general ancestor is called for
+Dynamic Binding,Runtime execution of the most specific version of a method when an operation is invoked. Prereq only for dynamic polymorphism
+Genericity,Using an abstract class to perform on different types of data so that you don't have to rewrite the same code for it that you already have for double; usually acts upon container classes aka collections
+Actor,Some thing outside the boundaries of the system that acts upon the system (a role not a specific person) NOT controlled by the system
+Things actors do, -use the system -install the system -start & stop the system -maintain the system -get and provide info for the system
+Parts of a use case prose -title -id -actors -preconditions -flow of events -post conditions
+UML Class Diagrams   CSI, Conceptual   models the domain not the software itself. Specification   models the public interface. Implementation   gives the details of the implementation (code)
+Operations   CSI,Conceptual   gives the prose responsibility. Specification   gives what others know of how it works. Implementation   the complete code of the operation.
+Attributes   CSI,Conceptual   the class has a property. Specification   the class can tell others about its property. Implementation Class X has property Y and the method getY()
+Associations   CSI,Conceptual   these guys know each other. Specification   These guys are related in their workings. Implementation   These guys have pointers or references to each other.
+Attributes vs. Associations   CSI,Conceptual   attributes are usually single values while associations may not be. Specification   attributes only imply one direction of navigation. Implementation   attributes imply a value while associations imply a reference
+Aggregation Properties,Formed of homogenous constituents which may belong to multiple aggregates. Aggregate can exist without its components but may not be useful.
+Composition Properties,Formed of heterogeneous components which may only belong to a single composite. Composite has a parallel lifetime with its components. 'Heart is a component; hand is a constituent.'
+Association + Aggregation + Composition,'knows a'; 'has a' replaceable/optional; 'has  a' necessary/irreplaceable
+Classification Relationship,One is an instance of the other. Blue is a color.
+Generalization Relationship,One is a specified form of the other. Pens are writing instruments.
+7 principles of object oriented programming,1. Objects 2. Abstraction Composition 3. Polymorphism Overloading/overriding 4. Inheritance Subclassing 5. Encapsulation Information hiding 6. Decoupling 7. Modularity
+Abstraction,Primarily defined by composition. A car is made up of a body tires and an engine.
+Polymorphism,One name different meanings. Breaks down into overloading and overriding.
+Overloading,Reusing the same name of a method with different parameters.
+Overriding,Reusing the same method name in subclasses so that the subclass can perform a specific activity with that method.
+Decoupling,Preventing interdependencies between objects.
+Inheritance,Subclassing. Reusing all the abilities of parent classes in the child classes.
+Encapsulation,Information hiding. Restricting access to the internal structure of an object.
+Modularity,Allowing the reuse of code by creating modules that perform specific functions.

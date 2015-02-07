@@ -1,0 +1,75 @@
+git add <directory>,Stages all changes in <directory> for the next commit.
+git add <file>,Stage all changes in <file> for the commit.
+git add  p,Begin an interactive staging session that lets you choose portions of a file to add to the next commit
+git branch,List all of the branches in your repository.
+git branch <branch>,Create a new branch called <branch>.
+git branch  D <branch>,Force delete the specifeid branch even if it has unmerged changes.
+git branch  d <branch>,Delete the specified branch.  This is a 'safe' operation in that git prevents you from delteing the branch if it has unmerged changes.
+git branch  m <branch>,Rename the current branch to <branch>
+git checkout <commit>,Update all files in the working directory to match the specified commit. You can use either a commit hash or a tag as the <commit>argument. This will put you in a detached HEAD state.
+git checkout <commit> <file>,checkout a previous version of a file. This turns the <file> that resides in the working directory into an exact copy of the one from <commit> and adds it to the staging area.
+git checkout <exising branch>,Check out the specified branch which should have already been created with git branch. This makes <existing branch> the current branch and updates the working directory to match.
+git checkout master,Return to the master branch.
+git checkout  b <new branch>,Create and check out <new branch>.
+git checkout  b <new branch> <existing branch>,Create a new branch using <existing branch> as it's base rather than the current branch.
+git clean,Removes untracked files from your working directory.
+git clean  df,Remove untracked files and untracked directorys from the current directory.
+git clean  f,Remove untracked files from the current directory.
+git clean  f <path>,Remove untracked files but limit the operation to a specified path.
+git clean  xf,Remove untracked files from the current directory as well as any files that git usually ignores.
+git clear  n,Perform a 'dry run' of git clean.  This will show you which files are going to be removed without actually doing it.
+git clone <repo>,Clone the repository located at <repo onto the local machine.
+git clone <repo> <directory>,Clone the repository located at <repo> into the folder called <directory> on the local machine.
+git commit,Commit the staged snapshot.
+git commit  a,Commit a snapshot of all changes in the working directory of tracked files.
+git commit  am '<message>',Commit a snapshot of all changes in the working directory of tracked files with <message> as the commit message.
+git commit  m '<message>',Commit the stanged snapshot the <message> as the commit message.
+git commit   ammend,Combine the staged changes with the previous commit and replace the previous commit with the resulting snapshot.  Running this when there is nothing staged lets you edit the previous commit's message without altering its snapshot.
+git config <config name> <argument>,Set's the configuration for the local project.
+git config user.name <name>,Defines the author's name to be used for all commits in the current repository.
+git config   global alias.<alias name> <git command>,Create a shortcut for a git command.
+git config   global <config name> <argument>,Set's the configuration for all projects that don't have a local override.
+git config   global user.email <email>,Define the author's email to be used for all commits by the current user.
+git config   global user.name <name>,Defines the author's name to be used for all commits by the current user.
+git config   global   edit,Opens the global configuration file in a text editor for manual editing.
+git config   system <config name> <argument>,Set's the configuration for the system.
+git config   system core.editor <editor>,Define the text editor used by commands like git commit for all users on the current machine.
+git fetch <remote>,Fetch all of the branches from the repository. This also downloads all of the required commits and files from the other repository.
+git fetch <remote> <branch>,Fetch only a specified branch from a remote repository.
+git init,Creates a git repository in the current directory
+git init <directory>,Creates an empty git repository in the specified directory
+git init   bare <directory>,Initialize an empty Git repository without a working directory
+git log,Display the entire commit history using the default formatting.
+git log <file>,Only display commits that include the specified file.
+git log <since>..<until>,Show only commits that occur between <since> and <until>. Both arguments can be either a commit ID a branch name HEAD or another kind of revision reverence.
+git log  n <limit>,Display the last <limit> number of commits.
+git log  p,Display the patch representing each commit. This shows the full diff of each commit which is the most detailed view you can have of the project history.
+git log   author'<pattern>',Search for commits by a particular author.
+git log   graph   decorate   oneline,Display a text graph with oneline commit information including the names of branches or tags of commits.
+git log   grep='<pattern>',search for commits with a commit message that matches <pattern> which can be a plain string or regex.
+git log   oneline,Condense each commit to a single line.  Useful for getting a highlevel overview of the project history.
+git log   stat,Display the commit histor as well as which files were altered and the relative number of lines that were added or deleted from each of them.
+git merge <branch>,Merge the specified branch into the current branch.
+git merge   no ff branch,Merge the specified branch into the current branch but always generate a merge commit (even if it was a fast forward merge.  Useful for documenting all merges that occur in your repository.
+git pull <remote>,Fetch the specified remote's copy of the current branch and immediately merge it into the local copy.  The same as git fetch <remote> followed by git merge origin/<current branch>
+git pull   rebase <remote>,Fetch the specified remotes's copy of the current branch and immediately rebase the local copy.
+git push <remote> <branch>,Push the specified branch to <remote> along with all of the necessary commits and internal objects.
+git push <remote>   all,Push all of your local branches to the specified remote.
+git push <remote>   force,Push to the remote repository forcing the push even if it results in a non fast forward merge.
+git push <remote>   tags,Send all of you local tags to the remote repository.
+git rebase <base>,Rebase the current branch onto <base> which can be any kind of commit reference (an ID a branch name a tag or a relative reference to HEAD).
+git rebase  i <base>,Rebase the current branch onto <base> using and interactive rebasing session.
+git reflog,Show the reflog for the current repository.
+git reflog   relaitve date,Show the reflog with relative date information (e.g. 2 weeks ago).
+git remote,List the remote connection you have to other repositories.
+git remote add <name> <url>,Create a new connection to a remote repository. After adding a remote you'll be able to use <name> as a convenient shortcut for <url> in other git commands.
+git remote rename <old name> <new name>,Rename a remote connection.
+git remote rm <name>,Remove the connectin to the remote repository.
+git remote  v,List the remote connections you have to other repositories includeing the urls of each.
+git reset,Reset the staging area to match the moce recent commit but leave the working direcotry unchanged.  This unstages all files without overwriting any changes, giving you the opportuinty to re build the staged snapshot from scratch.
+git reset <commit>,Move the current branch tip backward to <commit> reset the staging area to match but leaves working directory alone.  changes made since <commit> will reside in working directory letting you recommit the projectusing cleaner more atomic snapshots.
+git reset <file>,Removes the specified file from the staging area but leave the working direcotry unchanged. This unstages a file without overwriting any changes.
+git reset   hard,Reset the staging area and the working directory to match the most recent commit. In addition to unstaging changes the   hard flag tells git to overwrite all changes in the working directory. In other word sthe obliterates all uncommitted changes.
+git reset   hard <commit>,Move the current branch tip backward to <commit> and reset both the staging area and the working directory to match.  The obliterages not only the uncommitted changes but all commits after <commit> as well.
+git revert <commit>,Generate a new commit that undoes all of the changes introduced in <commit> then apply it to the current branch.
+git status,List which files are stages unstages and untracked.
