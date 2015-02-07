@@ -1,0 +1,20 @@
+Andorians,A blue-skinned species that is one of the founding races of the Federation
+Androids,Noonien Soong's creations are the most notable of these
+Bajorans,A species that was oppressed for generations by the Cardassians
+Betazoids,A telepathic race. The empathic Deanna Troi is half this race and half human
+Breen,A seclusive but feared race whose asymmetrical ships formed part of the enemy fleet in the Dominion War
+Cardassians,A reptilian species that oppressed the Bajorans and were instrumental for both sides in the Dominion War
+Emergency Medical Holograms,Holographic programs designed for medical assistance
+Ferengi,A species that's only goal is to succeed financially. Their leader is called the Grand Nagus
+Hirogen,A Delta Quadrant species of ruthless hunters
+Humans,One of the federation's founding members. All main character Star Trek captains were of this race
+Jem'Hadar,The soldiers of the Dominion
+Klingons,A confrontational warrior race with bumpy foreheads (depending on the show)
+Q,An omnipotent race. One member caused Picard much trouble
+Romulans,A powerful xenophobic race that is related to Vulcans
+Species 8472,A species from an alternate space called Fluidic Space who engaged in a war with the Borg.
+Talaxians,A species native to the Delta Quadrant. Neelix is one of these.
+The Borg,A race that lives to learn and they learn by absorbing other species into their own. Techno-zombies.
+Trill,A species that if they are lucky become hosts to symbionts with whom they share a planet
+Vulcans,An emotionless race guided by logic
+Xindi,A race made up of multiple species: arboreals primates insectoids aquatics and reptilians. Attacked Earth with a superweapon at one point
