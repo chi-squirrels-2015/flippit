@@ -1,6 +1,6 @@
 # decks.rb
 get '/decks' do
-	erb :'/deck'
+	erb :'/users/decks'
 end
 
 post '/decks/:deck_id' do
@@ -13,9 +13,9 @@ post '/decks/:deck_id' do
 	redirect '/decks/deck.id/cards'
 end
 
-get '/decks/:deck_id/cards' do
+post '/decks/:deck_id/cards' do
 
-	while 
+	until no_cards # need to make this method
 		@available_cards = []
 
 		Guess.where(round: round, correct?: false).each do |guess|
@@ -23,7 +23,15 @@ get '/decks/:deck_id/cards' do
 		end
 		@card = @available_cards.sample
 
-		erb: '/decks/deck.id/cards/'
+		erb :'/rounds/cards/card'
 	end
+
+	erb :'/rounds/deck_complete'
+end
+
+post '/decks/:deck_id/cards/evaluate' do
+
+
+	erb :'/rounds/cards/card_complete'
 end
 
