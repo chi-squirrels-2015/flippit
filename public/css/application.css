@@ -1,12 +1,10 @@
-class="stats"
+/*class="stats"
 
 class="stats_header"
 
 class="stats_subheader"
 
 class="round_stats"
-
-class="container"
 
 class="login"
 
@@ -16,22 +14,41 @@ class="cards"
 
 class="question"
 
-class="answer"
-
-/*class="decks"*/
-
-/*update for all classes*/
+class="answer"*/
 
 .container {
   position: relative;
 }
 
+button {
+  width: 100%;
+  height: 33px;
+  background-color: #aaa;
+  /*box-shadow: 3px 3px 2px #888888;*/
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .login {
-  box-shadow: 10px 10px 5px #888888;
+  box-shadow: 3px 3px 2px #888888;
   border-color: #335C7D;
-  margin: 0 15px;
-  box-sizing: border-box;
-  float: left;
+  float: center;
+  height: 35px;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  /*background-color: #CCC;*/
+}
+
+.login-select {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 60%;
+  height: 40%;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 40px;
 }
 
 .decks {
@@ -43,21 +60,14 @@ class="answer"
   top: 0; left: 0; bottom: 0; right: 0;
 }
 
-button {
-  position: center;
-  width: 75px;
-  height: 33px;
-  background-color: #aaa;
-  box-shadow: 10px 10px 5px #888888;
-}
 
 header {
   position: fixed;
   width: 100%;
   text-align: center;
   font-size: 20px;
-  line-height: 108px;
-  height: 108px;
+  line-height: 50px;
+  height: 100px;
   background: #335C7D;
   color: #fff;
 }
@@ -66,7 +76,7 @@ footer {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 100px;
+  height: 80px;
   width: 100%;
   background: #335C7D;
   text-align: center;
@@ -74,10 +84,14 @@ footer {
 }
 
 #login {
-  width: 505px;
-  height: 45px;
-  overflow: auto;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
+  width: 60%;
+  height: 40%;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 40px;
 }
+
+
