@@ -27,12 +27,11 @@ class="answer"
 }
 
 .login {
-  width: 50%;
-  height: 50%;
-  overflow: auto;
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  box-shadow: 10px 10px 5px #888888;
+  border-color: #335C7D;
+  margin: 0 15px;
+  box-sizing: border-box;
+  float: left;
 }
 
 .decks {
@@ -48,7 +47,7 @@ button {
   position: center;
   width: 75px;
   height: 33px;
-  background-color: #GGG;
+  background-color: #aaa;
   box-shadow: 10px 10px 5px #888888;
 }
 
@@ -72,4 +71,13 @@ footer {
   background: #335C7D;
   text-align: center;
   color: #fff;
+}
+
+#login {
+  width: 505px;
+  height: 45px;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
 }
