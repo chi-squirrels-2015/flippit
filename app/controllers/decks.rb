@@ -1,9 +1,10 @@
 # decks.rb
 get '/decks' do
+	@decks = Deck.all
 	erb :'/users/decks'
 end
 
-post '/decks/:deck_id' do
+get '/decks/:deck_id' do
 	redirect '/login' unless session[:user_id]
 
 	deck = Deck.find(params[:deck_id])
@@ -12,11 +13,19 @@ post '/decks/:deck_id' do
 	deck.cards.each do |card|
 		Guess.create(round: round, card: card)
 	end
-	redirect '/decks/deck.id/cards'
+
+	redirect '/decks/:deck_id/cards'
+end
+
+
+get '/decks/:deck_id/cards' do
+	puts params
+
+	erb :'/rounds/cards/card'
 end
 
 post '/decks/:deck_id/cards' do
-
+	puts params
 	until no_cards # need to make this method
 		@available_cards = []
 
@@ -29,6 +38,11 @@ post '/decks/:deck_id/cards' do
 	end
 
 	erb :'/rounds/deck_complete'
+end
+
+
+get '/decks/:deck_id/cards/evaluate' do
+
 end
 
 post '/decks/:deck_id/cards/evaluate' do

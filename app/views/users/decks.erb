@@ -1,9 +1,11 @@
 <div class="container">
   <div class="decks">
-    <form action="/decks/1" method="get">
-      <button type="submit">Star Trek</button>
+    <% @decks.each do |deck| %>
+    <form action="/decks/<%=deck.id%>" method="get">
+      <button type="submit"><%=deck.name%></button>
     </form>
-    <form action="/decks/2" method="get">
+    <% end %>
+    <!-- <form action="/decks/2" method="get">
       <button type="submit">State Capitals</button>
     </form>
     <form action="/decks/3" method="get">
@@ -11,6 +13,6 @@
     </form>
     <form action="/decks/4" method="get">
       <button type="submit">Git Commands</button>
-    </form>
+    </form> -->
   </div>
 </div>
