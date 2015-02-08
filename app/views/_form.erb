@@ -1,0 +1,15 @@
+<label for="title">Title</label>
+<br>
+<input id="title" type="text" name="entry[title]" value="<%= entry.title %>" />
+<br><br>
+<textarea id="body" rows="5" cols="50" name="entry[body]">
+<%= entry.body.gsub("<br>","\n") %>
+</textarea>
+<p>#Tags: <input id="tags" type="text" name="tags" size="30" value="
+<%@entry.tags.each do |tag| %>
+<%= "\#" + tag.name + " "%>
+<% end %>" />
+</p>
+
+<button type="submit">Save Forever and Ever</button>
+
