@@ -8,10 +8,12 @@ get '/logins' do
 end
 
 post '/logins' do
-	if user = User.find_by(name: params[:user]["name"]).try(:authenticate, params[:user]["password"])
+  puts params
+	if params[:name] == User.find_by(name: params[:name]).try(:authenticate, params[:password])
 		session[:user_id] = user.id
 		redirect '/decks'
 	else
+    @error = "try again"
 		erb :"/logins"
 	end
 end
