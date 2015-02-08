@@ -14,7 +14,7 @@ get '/decks/:deck_id' do
 		Guess.create(round: round, card: card)
 	end
 
-	redirect '/decks/#{deck.id}/cards'
+	redirect "/decks/#{deck.id}/cards"
 end
 
 
