@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="round_complete">
+    You have finished this round!
+    <form action="/decks/@deck_id" method="post">
+      <button type="submit" name="replay">Replay Current Deck</button>
+    </form>
+    <form action="/decks" method="post">
+      <button type="submit" name="continue">Return to Decks</button>
+    </form>
+  </div>
+</div>

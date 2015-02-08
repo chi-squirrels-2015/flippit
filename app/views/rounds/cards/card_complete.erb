@@ -3,5 +3,8 @@
     <%= @card_result %>
     <div class="question">Question: <%= card.definition %></div>
     <div class="answer">Answer:   <%= card.answer %></div>
+    <form action="/decks/@deck_id/cards/" method="post">
+      <button type="submit" name="continue">Continue</button>
+    </form>
   </div>
 </div>
