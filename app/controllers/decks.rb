@@ -6,7 +6,7 @@ end
 post '/decks/:deck_id' do
 	deck = Deck.find(params[:deck_id])
 	round = Round.create(user_id: session[:user_id], deck_id: params[:deck_id] )
-	
+
 	deck.cards.each do |card|
 		Guess.create(round: round, card: card)
 	end
