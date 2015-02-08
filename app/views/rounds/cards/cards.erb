@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="cards">
+    <div class="question"><%= card.definition %></div>
+      <form action="/decks/@deck_id/cards/" method="post">
+        <button type="submit" name="answer" value="<%= answer_1 %>"><%= answer_1 %></button>
+        <button type="submit" name="answer" value="<%= answer_2 %>"><%= answer_2 %></button>
+        <button type="submit" name="answer" value="<%= answer_3 %>"><%= answer_3 %></button>
+        <button type="submit" name="answer" value="<%= answer_4 %>"><%= answer_4 %></button>
+      </form>
+    </div>
+  </div>
+</div>
