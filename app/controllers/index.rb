@@ -8,8 +8,8 @@ get '/logins' do
 end
 
 post '/logins' do
-  puts params
-	if params[:name] == User.find_by(name: params[:name]).try(:authenticate, params[:password])
+  user = User.find_by(name: params[:name]).try(:authenticate, params[:password])
+	if user
 		session[:user_id] = user.id
 		redirect '/decks'
 	else
