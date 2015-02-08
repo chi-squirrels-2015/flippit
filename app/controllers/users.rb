@@ -8,6 +8,5 @@ post '/users/new' do
 	else
 		erb :'users/new'
 	end
-
 end
 

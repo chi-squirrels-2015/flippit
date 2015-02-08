@@ -15,7 +15,3 @@ post '/logins' do
 		erb :"/logins"
 	end
 end
-
-post '/' do
-
-end
