@@ -8,7 +8,6 @@ get '/logins' do
 end
 
 post '/logins' do
-  puts params
   user = User.find_by(name: params[:name]).try(:authenticate, params[:password])
 	if user
 		session[:user_id] = user.id
