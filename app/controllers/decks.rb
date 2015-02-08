@@ -7,14 +7,14 @@ end
 get '/decks/:deck_id' do
 	redirect '/login' unless session[:user_id]
 
-	deck = Deck.find(params[:deck_id])
-	round = Round.create(user_id: session[:user_id], deck_id: params[:deck_id] )
-
+	@deck = Deck.find(params[:deck_id])
+	@round = Round.create(user_id: session[:user_id], deck_id: params[:deck_id] )
 	deck.cards.each do |card|
 		Guess.create(round: round, card: card)
 	end
 
 	redirect "/decks/#{deck.id}/cards"
+
 end
 
 
