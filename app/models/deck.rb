@@ -6,4 +6,8 @@ class Deck < ActiveRecord::Base
   def no_cards
     #should return true/false?
   end
+
+  def next_card(current_card_id)
+    @deck.cards.find(current_card_id+1)
+  end
 end

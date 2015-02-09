@@ -1,9 +1,12 @@
 <div class="container">
   <div class="decks">
     <% @decks.each do |deck| %>
-    <form action="/decks/<%=deck.id%>" method="get">
-      <div class="myButton" type="submit"><%=deck.name%></div>
-    </form>
+      <form action="/decks/<%=deck.id%>" method="get">
+        <div class="myButton">
+          <button type="submit"><%=deck.name%></button>
+        </div>
+      </br>
+      </form>
     <% end %>
   </div>
 </div>
