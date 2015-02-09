@@ -1,15 +1,15 @@
 <div class="container">
   <div class="cards">
-    <div class="question"><%= @cards[0].definition %></div>
-      <form action="/decks/<%=@deck.id%>/<%=@cards[0].id%>/evaluate" method="post">
-        <button type="submit" name="answer" value="<%= @answers[0] %>"><%= @answers[0] %></button>
-        <button type="submit" name="answer" value="<%= @answers[1] %>"><%= @answers[1] %></button>
-        <button type="submit" name="answer" value="<%= @answers[2] %>"><%= @answers[2] %></button>
-        <button type="submit" name="answer" value="<%= @answers[3] %>"><%= @answers[3] %></button>
+    <div class="question"><p><%= @card.definition %></p></div>
+      <form action="/decks/<%=@deck.id%>/<%=@card.id%>/evaluate" method="post">
+        <button type="submit" name="answer" value="<%= @choices[0] %>"><%= @choices[0] %></button>
+        <button type="submit" name="answer" value="<%= @choices[1] %>"><%= @choices[1] %></button>
+        <button type="submit" name="answer" value="<%= @choices[2] %>"><%= @choices[2] %></button>
+        <button type="submit" name="answer" value="<%= @choices[3] %>"><%= @choices[3] %></button>
       </form>
     </div>
   </div>
 </div>
 
-#needs better way to decide question, and answers.
-#why isnt answer being sent with form? shouldnt post give the value of the button pressed?
+<!-- needs better way to decide question, and answers.
+why isnt answer being sent with form? shouldnt post give the value of the button pressed? -->
