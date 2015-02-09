@@ -1,12 +1,15 @@
 <div class="container">
   <div class="cards">
-    <div class="question"><%= card.definition %></div>
-      <form action="/decks/@deck_id/cards/evaluate" method="post">
-        <button type="submit" name="answer" value="<%= answer_1 %>"><%= answer_1 %></button>
-        <button type="submit" name="answer" value="<%= answer_2 %>"><%= answer_2 %></button>
-        <button type="submit" name="answer" value="<%= answer_3 %>"><%= answer_3 %></button>
-        <button type="submit" name="answer" value="<%= answer_4 %>"><%= answer_4 %></button>
+    <div class="question"><%= @cards[0].definition %></div>
+      <form action="/decks/<%=@deck.id%>/<%=@cards[0].id%>/evaluate" method="post">
+        <button type="submit" name="answer" value="<%= @answers[0] %>"><%= @answers[0] %></button>
+        <button type="submit" name="answer" value="<%= @answers[1] %>"><%= @answers[1] %></button>
+        <button type="submit" name="answer" value="<%= @answers[2] %>"><%= @answers[2] %></button>
+        <button type="submit" name="answer" value="<%= @answers[3] %>"><%= @answers[3] %></button>
       </form>
     </div>
   </div>
 </div>
+
+#needs better way to decide question, and answers.
+#why isnt answer being sent with form? shouldnt post give the value of the button pressed?
